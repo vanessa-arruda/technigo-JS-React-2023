@@ -21,57 +21,63 @@ const pokemons = [
 // the pokemons from the pokemons array
 // invoke the function to see that it works
 
-console.log("Iteration 01");
+// console.log("Iteration 01");
 
-// Using Map
-console.log("---- Using Map() Array Method");
-pokemons.map((pokemon) => {
-  console.log(pokemon);
-});
+// // Using Map
+// console.log("---- Using Map() Array Method");
+// pokemons.map((pokemon) => {
+//   console.log(pokemon);
+// });
 
-// Using Filter()
-console.log("---- Using Filter() Array Method");
-pokemons.filter((pokemon) => {
-  console.log(pokemon);
-});
+// // Using Filter()
+// console.log("---- Using Filter() Array Method");
+// pokemons.filter((pokemon) => {
+//   console.log(pokemon);
+// });
 
-// Using For Each()
-console.log("---- Using forEach() Array Method");
-pokemons.forEach((pokemon) => {
-  console.log(pokemon);
-});
+// // Using For Each()
+// console.log("---- Using forEach() Array Method");
+// pokemons.forEach((pokemon) => {
+//   console.log(pokemon);
+// });
 
-// Using For  Loop()
-console.log("---- Using for Loop");
-let usingForLoop = () => {
-  for (let i = 0; i < pokemons.length; i++) {
+// // Using For  Loop()
+// console.log("---- Using for Loop");
+// let usingForLoop = () => {
+//   for (let i = 0; i < pokemons.length; i++) {
+//     console.log(pokemons[i]);
+//   }
+// };
+// usingForLoop();
+
+// // Using While Loop()
+// console.log("---- Using doWhile Statement");
+// let usingDoWhileLoop = () => {
+//   let index = 0;
+//   do {
+//     console.log(pokemons[index]);
+//     index++;
+//   } while (index < pokemons.length);
+// };
+// usingDoWhileLoop();
+
+// console.log("----");
+
+// // Using ForOf Loop()
+// console.log("---- Using forOf Loop");
+// let usingForOf = () => {
+//   for (const pokemon of pokemons) {
+//     console.log(pokemon);
+//   }
+// };
+// usingForOf();
+// console.log("----");
+const checkPokemon = () => {
+  for(let i = 0; i < pokemons.length; i++) {
     console.log(pokemons[i]);
   }
-};
-usingForLoop();
-
-// Using While Loop()
-console.log("---- Using doWhile Statement");
-let usingDoWhileLoop = () => {
-  let index = 0;
-  do {
-    console.log(pokemons[index]);
-    index++;
-  } while (index < pokemons.length);
-};
-usingDoWhileLoop();
-
-console.log("----");
-
-// Using ForOf Loop()
-console.log("---- Using forOf Loop");
-let usingForOf = () => {
-  for (const pokemon of pokemons) {
-    console.log(pokemon);
-  }
-};
-usingForOf();
-console.log("----");
+}
+//checkPokemon();
 
 // 2)
 // Create an object for the pokemon Pikachu.
@@ -88,38 +94,59 @@ let pokemon = {
   weight: "6.0 KG",
 };
 
-console.log("----");
+// console.log("----");
+let pokemonAll = {
+  name: "Pikachu",
+  type: "electricity",
+  strength: 30,
+  color: "yellow",
+  weight: "3.75 kg",
+  height: "40 cm",
+}
 // 3)
 // console.log something like
 // 'Pikachu is a electricity pokemon with the strength of 32'
 // Selecting some of the information about your pikachu object.
-console.log("Iteration 03");
-console.log(
-  `${pokemon.name} is a ${pokemon.abilities[0]} pokemon with the strength of ${pokemon.strength}`
-);
-console.log("----");
+// console.log("Iteration 03");
+// console.log(
+//   `${pokemon.name} is a ${pokemon.abilities[0]} pokemon with the strength of ${pokemon.strength}`
+// );
+// console.log("----");
+
+// // 4)
+// // Add the property stillToCatch: true to the Pikachu object.
+// console.log("Iteration 04");
+// pokemon.stillToCatch = true;
+// console.table(pokemon);
+// console.log("----");
+
+// // 5)
+// // change the value of the key strength in the Pikachu object.
+// console.log("Iteration 05");
+// pokemon.stillToCatch = false;
+// console.table(pokemon);
+// console.log("----");
+
+// // 6)
+// // Delete a property from the Pikachu object.
+// console.log("Iteration 06");
+// delete pokemon.weight;
+// console.table(pokemon);
+// console.log("----");
+
+console.log(`${pokemonAll.name} is of type ${pokemonAll.type} with the color ${pokemonAll.color}.`);
 
 // 4)
 // Add the property stillToCatch: true to the Pikachu object.
-console.log("Iteration 04");
-pokemon.stillToCatch = true;
-console.table(pokemon);
-console.log("----");
-
+  pokemonAll['stillToCatch'] = true;
 // 5)
 // change the value of the key strength in the Pikachu object.
-console.log("Iteration 05");
-pokemon.stillToCatch = false;
-console.table(pokemon);
-console.log("----");
-
+  pokemonAll['strength'] = 15;
+  console.log(pokemonAll);
 // 6)
 // Delete a property from the Pikachu object.
-console.log("Iteration 06");
-delete pokemon.weight;
-console.table(pokemon);
-console.log("----");
-
+delete pokemonAll.weight;
+  console.log(pokemonAll);
 // 7)
 // Fill up this array with a few more pokemons.
 // It is an array with objects!
@@ -142,59 +169,92 @@ const moreAboutPokemons = [
   },
   {
     name: "Pikachu",
-    element: "earth",
-    strength: 35,
+  //   element: "earth",
+  //   strength: 35,
+  // },
+  // {
+  //   name: "Ditto",
+  //   element: "earth",
+  //   strength: 40,
+  // },
+    element: "electricity",
+    strength: 30,
   },
   {
-    name: "Ditto",
-    element: "earth",
-    strength: 40,
+    name: "Mr Mime",
+    element: "normal",
+    strength: 20,
   },
+  {
+    name: "Doduo",
+    element: "flying",
+    strength: 24,
+  },
+  {
+    name: "Squirtle",
+    element: "water",
+    strength: 28,
+  },
+  {
+    name: "Oddish",
+    element: "grass",
+    strength: 12,
+  }
 ];
 
 // 8)
 // Print out all the NAMES of the pokemons in this new array.
-console.log("Iteration 08");
-// Using forEach
-console.log("---- Using forEach() Array Method");
-moreAboutPokemons.forEach((pokemon) => {
-  console.log(`Pokemon name: ${pokemon.name}`);
-});
+// console.log("Iteration 08");
+// // Using forEach
+// console.log("---- Using forEach() Array Method");
+// moreAboutPokemons.forEach((pokemon) => {
+//   console.log(`Pokemon name: ${pokemon.name}`);
+// });
 
-// Using Map
-console.log("---- Using Map() Array Method");
-moreAboutPokemons.map((pokemon) => {
-  console.log(`Pokemon name: ${pokemon.name}`);
-});
+// // Using Map
+// console.log("---- Using Map() Array Method");
+// moreAboutPokemons.map((pokemon) => {
+//   console.log(`Pokemon name: ${pokemon.name}`);
+// });
 
-// Using Dot Notation
-console.log("---- Using Dot Notation");
-let dotNotationExample = `
-Pokemon names: 
-${moreAboutPokemons[0].name}
-${moreAboutPokemons[1].name}
-${moreAboutPokemons[2].name}
-${moreAboutPokemons[3].name}
-`;
-console.log(dotNotationExample);
+// // Using Dot Notation
+// console.log("---- Using Dot Notation");
+// let dotNotationExample = `
+// Pokemon names: 
+// ${moreAboutPokemons[0].name}
+// ${moreAboutPokemons[1].name}
+// ${moreAboutPokemons[2].name}
+// ${moreAboutPokemons[3].name}
+// `;
+// console.log(dotNotationExample);
 
-console.log("----");
+// console.log("----");
+const checkMorePokemons = () => {
+  for(let i = 0; i < moreAboutPokemons.length; i++) {
+    console.log(moreAboutPokemons[i].element);
+  }
+}
+checkMorePokemons();
 // 9)
 // Print out something like
 // 'Bulbasaur is a water pokemon with the strength of 32'
 // Do this for all the pokemons.
-console.log("Iteration 09");
+// console.log("Iteration 09");
 
-// Using Dot Notation for just one element
-console.log("---- Using Dot Notation for just one element");
-let bulbasaur = `${moreAboutPokemons[0].name} is a ${moreAboutPokemons[0].element} pokemon with the strength of ${moreAboutPokemons[0].strength}`;
-console.log(bulbasaur);
+// // Using Dot Notation for just one element
+// console.log("---- Using Dot Notation for just one element");
+// let bulbasaur = `${moreAboutPokemons[0].name} is a ${moreAboutPokemons[0].element} pokemon with the strength of ${moreAboutPokemons[0].strength}`;
+// console.log(bulbasaur);
 
-// Using forEach to loop through array of objects
-console.log(
-  "---- Using forEach to showcase all pokemons within array of objects"
-);
-moreAboutPokemons.forEach((pokemon) => {
-  let text = `${pokemon.name} is a ${pokemon.element} pokemon with the strength of ${pokemon.strength}`;
-  console.log(text);
-});
+// // Using forEach to loop through array of objects
+// console.log(
+//   "---- Using forEach to showcase all pokemons within array of objects"
+// );
+// moreAboutPokemons.forEach((pokemon) => {
+//   let text = `${pokemon.name} is a ${pokemon.element} pokemon with the strength of ${pokemon.strength}`;
+//   console.log(text);
+// });
+
+console.log(`${moreAboutPokemons[0].name} is a ${moreAboutPokemons[0].element} pokemon with the strength of ${moreAboutPokemons[0].strength}.`);
+
+
