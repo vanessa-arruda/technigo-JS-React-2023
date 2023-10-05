@@ -8,8 +8,8 @@
 
   <body>
     <h1>Hello hello</h1>
-    <div class="box">
-      <p>
+    <div class="box" id="box-container">
+      <p id="first-text">
         This is a box with text that will change color when you toggle the theme
         switch
       </p>
@@ -19,17 +19,16 @@
         <legend>Select a theme</legend>
 
         <div>
-          <input type="radio" id="dark" name="theme" value="dark" checked />
+          <input type="radio" id="dark" name="theme" value="dark"/>
           <label for="dark">Dark</label>
         </div>
 
         <div>
-          <input type="radio" id="light" name="theme" value="light" />
+          <input type="radio" id="light" name="theme" value="light"/>
           <label for="light">Light</label>
         </div>
-
         <div>
-          <input type="radio" id="crazy" name="theme" value="crazy" />
+          <input type="radio" id="crazy" name="theme" value="crazy"/>
           <label for="crazy">Crazy</label>
         </div>
       </fieldset>
