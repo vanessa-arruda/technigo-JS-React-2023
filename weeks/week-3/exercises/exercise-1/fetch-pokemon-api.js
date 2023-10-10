@@ -21,18 +21,39 @@ const types = document.getElementById("types");
 //    logs the results in the console.
 //    HINT --> Don't forget to invoke the function
 
-const fetchPokemons = async () => {
-  /*Fetch all pokemons here*/
+//create variable to improve URL usage along code
+const URL = 'https://pokeapi.co/api/v2/pokemon';
+//create variable to store the json in an array
+let pokemonData = [];
 
-};
-//fetchPokemons();
+fetch(URL)
+  .then((response) => {
+    return response.json();
+  })
+  .then((json) => {
+    console.log(json.results);//2.a remove metadata by adding .results
+    pokemonData = json.results;
+    console.log("exercise 2.b: ", pokemonData.at(0)); //2.b
+    
+    pokemonData.forEach((pokemon) => {//2.c
+      console.log("exercise 2.c: ", pokemon.name);
+    });
+  })
+  .catch((err) => {
+    console.log('caught error', err);
+    
+  });
 
 // 2) a) As you can see, we get some metadata as well as
 //    the results of the fetch. Change the console.log so
 //    that you only log the array of pokemon objects.
 
+
+
 //    b) Log only the name of the first pokemon in the
 //    pokemon objects array
+
+
 
 //    c) Log the names of all pokemons in the array
 
